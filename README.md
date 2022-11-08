@@ -26,14 +26,6 @@ or on Windwos Prompt/PowerShell
 docker run --rm -it -v ${pwd}/images/php:/app ${docker build -q .} composer create-project --prefer-dist laravel/lumen ./app
 ```
 
-## Install Composer Dependencies
-
-In `images/php/app` run `composer install`.
-```bash
-cd images/php/app && composer install
-```
-
-
 ### Configuration
 
 There are two configurations using `.env` files. One `.env` file for docker-compose.yaml and another for the php application.

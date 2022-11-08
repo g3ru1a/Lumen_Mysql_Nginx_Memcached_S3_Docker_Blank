@@ -17,3 +17,5 @@ COPY ./ /var/www/html
 RUN chown -R www-data:www-data /var/www/html
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+WORKDIR "/var/www/html/app"
+RUN composer install
