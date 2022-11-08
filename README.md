@@ -13,7 +13,7 @@ git clone https://github.com/saada/docker-lumen.git
 cd docker-lumen
 ```
 
-## Create Lumen App
+## Create Lumen App (Use if changing lumen version)
 
 now, create the app in the `images/php` directory named `app`
 
@@ -25,6 +25,14 @@ or on Windwos Prompt/PowerShell
 ```bash
 docker run --rm -it -v ${pwd}/images/php:/app ${docker build -q .} composer create-project --prefer-dist laravel/lumen ./app
 ```
+
+## Install Composer Dependencies
+
+In `images/php/app` run `composer install`.
+```bash
+cd images/php/app && composer install
+```
+
 
 ### Configuration
 
